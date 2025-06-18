@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>خطأ 404 - الصفحة غير موجودة</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Cairo', sans-serif;
+      background: linear-gradient(135deg, #1f1c2c, #928dab);
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      overflow: hidden;
+    }
+
+    .container {
+      text-align: center;
+      background: rgba(255, 255, 255, 0.07);
+      padding: 50px 30px;
+      border-radius: 20px;
+      box-shadow: 0 0 25px rgba(0, 0, 0, 0.4);
+      backdrop-filter: blur(8px);
+      animation: fadeIn 1.5s ease;
+    }
+
+    .icon {
+      font-size: 5rem;
+      color: #00ffd5;
+      margin-bottom: 20px;
+      animation: bounce 1.8s infinite;
+    }
+
+    h1 {
+      font-size: 3em;
+      margin-bottom: 10px;
+    }
+
+    p {
+      font-size: 1.3em;
+      margin-bottom: 30px;
+      color: #f1f1f1;
+    }
+
+    a.btn {
+      background: linear-gradient(135deg, #00ffd5, #00c3aa);
+      padding: 14px 28px;
+      border-radius: 40px;
+      color: #000;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 1.1em;
+      transition: 0.3s;
+      box-shadow: 0 0 20px #00ffd5;
+    }
+
+    a.btn:hover {
+      background: linear-gradient(135deg, #00c3aa, #00ffd5);
+      transform: scale(1.05);
+    }
+
+    @keyframes bounce {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: scale(0.8); }
+      to { opacity: 1; transform: scale(1); }
+    }
+
+    .coming-soon {
+      margin-top: 20px;
+      font-size: 1.1em;
+      color: #ff8080;
+      background-color: rgba(255, 255, 255, 0.1);
+      padding: 10px 20px;
+      border-radius: 12px;
+      display: inline-block;
+      animation: fadeIn 2s ease-in-out;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="icon"><i class="fas fa-triangle-exclamation"></i></div>
+    <h1>خطأ 404</h1>
+    <p>عذرًا، هذه الصفحة غير موجودة حاليًا.</p>
+    <div class="coming-soon">🚧 سيتم إضافتها قريبًا، ترقّب التحديثات!</div>
+    <br><br>
+    <a href="/" class="btn"><i class="fas fa-arrow-right"></i> العودة إلى الصفحة الرئيسية</a>
+  </div>
+</body>
+</html>
