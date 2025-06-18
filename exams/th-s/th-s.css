@@ -1,1 +1,144 @@
+    * {
+      box-sizing: border-box;
+    }
 
+    body {
+      margin: 0;
+      font-family: 'Cairo', sans-serif;
+      background: linear-gradient(to bottom right, #6a11cb, #2575fc);
+      color: white;
+      padding: 20px;
+      padding-bottom: 70px; /* علشان الفوتر الثابت ما يغطي المحتوى */
+    }
+
+    header {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    header h1 {
+      font-size: 2.5em;
+      color: #ffffff;
+      margin-bottom: 10px;
+      text-shadow: 1px 1px 5px rgba(0,0,0,0.4);
+    }
+
+    header p {
+      color: #e0e0e0;
+      font-size: 1.1em;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 20px;
+    }
+
+    .card {
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 16px;
+      padding: 25px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+      transition: transform 0.3s, box-shadow 0.3s;
+      text-align: center;
+      backdrop-filter: blur(6px);
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 14px 35px rgba(0, 0, 0, 0.5);
+    }
+
+    .icon {
+      font-size: 40px;
+      color: #ffffff;
+      margin-bottom: 10px;
+      text-shadow: 0 0 10px #ffffff88;
+    }
+
+    .card h2 {
+      font-size: 1.5em;
+      margin: 10px 0;
+      color: #ffffff;
+    }
+
+    .card p {
+      color: #ddd;
+      font-size: 0.95em;
+    }
+
+    .card a {
+      display: inline-block;
+      margin-top: 15px;
+      padding: 10px 20px;
+      background: #ffffff;
+      color: #2575fc;
+      text-decoration: none;
+      border-radius: 8px;
+      font-weight: bold;
+      transition: background 0.3s, color 0.3s;
+    }
+
+    .card a:hover {
+      background: #2575fc;
+      color: white;
+    }
+
+    @media (min-width: 700px) {
+      .cards {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (min-width: 1000px) {
+      .cards {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+
+.footer {
+  position: fixed;
+  bottom: 10px;
+  right: 50%;
+  transform: translate(50%, 20px);
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(10px);
+  color: #f1f1f1;
+  padding: 12px 28px;
+  border-radius: 10px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.35);
+  font-size: 1em;
+  z-index: 999;
+  text-align: center;
+  width: 90%;          /* 👈 هذا يجعل الفوتر أعرض */
+  max-width: 600px;     /* 👈 هذا يحدد الحد الأقصى للعرض */
+  opacity: 0;
+  animation: fadeInUp 1s ease forwards;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  direction: rtl;
+}
+
+.footer a {
+  color: #00ffee;
+  text-decoration: underline;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+.footer a:hover {
+  color: #ffffff;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translate(50%, 30px);
+  }
+  to {
+    opacity: 1;
+    transform: translate(50%, 0);
+  }
+}
