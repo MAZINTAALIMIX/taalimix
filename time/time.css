@@ -1,0 +1,85 @@
+body {
+      margin: 0;
+      font-family: 'Cairo', sans-serif;
+      background: linear-gradient(to bottom right, #6a11cb, #2575fc);
+      color: white;
+      padding: 20px;
+    }h1 {
+  text-align: center;
+  font-size: 2.5em;
+  color: #ffffff;
+  margin-bottom: 10px;
+  text-shadow: 1px 1px 5px rgba(0,0,0,0.4);
+}
+
+p.intro {
+  text-align: center;
+  font-size: 1.1em;
+  color: #e0e0e0;
+  margin-bottom: 30px;
+}
+
+.section {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+  padding: 25px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+  margin-bottom: 30px;
+  backdrop-filter: blur(6px);
+}
+
+.section h2 {
+  color: #ffffff;
+  font-size: 1.5em;
+  margin-bottom: 10px;
+}
+
+.section p {
+  color: #ccc;
+  font-size: 1em;
+}
+
+.section textarea {
+  width: 100%;
+  height: 150px;
+  padding: 10px;
+  border-radius: 10px;
+  border: none;
+  font-size: 1em;
+  background: #ffffff22;
+  color: white;
+  resize: vertical;
+}
+
+.section button {
+  margin-top: 10px;
+  background: #00ffea;
+  color: #000;
+  border: none;
+  padding: 10px 20px;
+  font-weight: bold;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.section button:hover {
+  background: #ffffff;
+  color: #00aab3;
+}
+
+.timer-display {
+  font-size: 1.8em;
+  text-align: center;
+  margin: 15px 0;
+  color: #00ffea;
+}
+
+.icon-title {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.icon-title i {
+  font-size: 1.4em;
+  color: #00ffea;
+}
