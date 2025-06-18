@@ -1,0 +1,64 @@
+<!DOCTYPE html><html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>تنظيم الوقت</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="time.css" type="text/css" media="all" />
+</head>
+<body>
+  <h1><i class="fas fa-clock"></i> تنظيم الوقت</h1>
+  <p class="intro">هذه الصفحة تساعدك على التخطيط وتنظيم وقت الدراسة بطريقة عملية.</p>  <div class="section">
+    <div class="icon-title"><i class="fas fa-stopwatch"></i><h2>عداد المذاكرة</h2></div>
+    <p>ابدأ العداد لتتبع وقت مذاكرتك:</p>
+    <div class="timer-display" id="timer">00:00:00</div>
+    <button onclick="startTimer()">ابدأ</button>
+    <button onclick="stopTimer()">إيقاف</button>
+    <button onclick="resetTimer()">إعادة التعيين</button>
+  </div>  <div class="section">
+    <div class="icon-title"><i class="fas fa-pencil-alt"></i><h2>إنشاء خطة دراسية</h2></div>
+    <p>اكتب خطة دراستك لهذا اليوم وحدد المواد وساعات المذاكرة:</p>
+    <textarea placeholder="مثال: من 4م إلى 5م رياضيات - من 6م إلى 7م كيمياء..."></textarea><br>
+    <button onclick="alert('تم حفظ خطتك! تأكد من تنفيذها اليوم')">حفظ الخطة</button>
+  </div>  <div class="section">
+    <div class="icon-title"><i class="fas fa-lightbulb"></i><h2>طريقة إنشاء خطة متكاملة</h2></div>
+    <p>
+      ✨ حدد عدد الساعات المتاحة في يومك.<br>
+      ✨ قسم الساعات على المواد حسب صعوبتها.<br>
+      ✨ ضع استراحات قصيرة بعد كل ساعة.<br>
+      ✨ ابدأ بالمادة الأصعب أو التي تحتاج تركيز أكبر.<br>
+      ✨ التزم بالخطة قدر الإمكان وعدّلها إذا احتجت.<br>
+    </p>
+  </div>  
+ <script>    let timerInterval;
+    let seconds = 0;
+
+    function updateDisplay() {
+      let hrs = String(Math.floor(seconds / 3600)).padStart(2, '0');
+      let mins = String(Math.floor((seconds % 3600) / 60)).padStart(2, '0');
+      let secs = String(seconds % 60).padStart(2, '0');
+      document.getElementById('timer').textContent = `${hrs}:${mins}:${secs}`;
+    }
+
+    function startTimer() {
+      if (!timerInterval) {
+        timerInterval = setInterval(() => {
+          seconds++;
+          updateDisplay();
+        }, 1000);
+      }
+    }
+
+    function stopTimer() {
+      clearInterval(timerInterval);
+      timerInterval = null;
+    }
+
+    function resetTimer() {
+      stopTimer();
+      seconds = 0;
+      updateDisplay();
+    }</script>
+  </body>
+</html>
