@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>taalimix</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@600&display=swap" rel="stylesheet">
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Cairo', sans-serif;
+      background: linear-gradient(135deg, #6a11cb, #2575fc);
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+      color: white;
+      text-align: center;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 500px;
+      animation: fadeIn 1.2s ease-in-out;
+    }
+
+    h1 {
+      font-size: 2em;
+      margin-bottom: 40px;
+      text-shadow: 1px 1px 6px #00000066;
+    }
+
+    .buttons {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .btn {
+      width: 100%;
+      padding: 16px;
+      font-size: 1.1em;
+      border: none;
+      border-radius: 12px;
+      background-color: white;
+      color: #2575fc;
+      font-weight: bold;
+      box-shadow: 0 6px 14px rgba(0, 0, 0, 0.3);
+      transition: transform 0.2s, background-color 0.3s, color 0.3s;
+    }
+
+    .btn:hover {
+      transform: scale(1.03);
+      background-color: #2575fc;
+      color: white;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @media (min-width: 600px) {
+      h1 {
+        font-size: 2.5em;
+      }
+
+      .btn {
+        font-size: 1.2em;
+        padding: 18px;
+      }
+
+      .buttons {
+        flex-direction: row;
+        justify-content: center;
+      }
+
+      .btn {
+        width: 45%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>مرحباً بك في taalimix</h1>
+    <h1>اختر مرحلتك التعليمية</h1>
+    <div class="buttons">
+      <button class="btn" onclick="window.location.href='th-s/th-s.html'">الثالث ثانوي</button>
+<button class="btn" onclick="window.location.href='error404.html'">الثالث متوسط</button>
+    </div>
+  </div>
+</body>
+</html>
